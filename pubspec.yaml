@@ -1,0 +1,31 @@
+name: famto_mini_booking
+description: Famto Mini Service Booking Flow - a demo home-services booking app.
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  provider: ^6.1.2
+  intl: ">=0.19.0 <1.0.0"
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  flutter_launcher_icons: ^0.14.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/categories/
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/categories/famlogo.png"
+  remove_alpha_ios: false
+
