@@ -26,25 +26,33 @@ class HomeScreen extends StatelessWidget {
     final catalog = context.watch<CatalogProvider>();
     final state = catalog.categories;
 
-    return Scaffold(
-      body: SafeArea(
-        child: ResponsiveCenter(
-          child: RefreshIndicator(
-            onRefresh: catalog.loadCategories,
-            child: CustomScrollView(
-              physics: const AlwaysScrollableScrollPhysics(),
-              slivers: [
-                const SliverToBoxAdapter(child: _HomeHeader()),
-                const SliverToBoxAdapter(
-                  child: SectionTitle(
-                    title: 'What do you need help with?',
-                    subtitle: 'Choose a category to see available services',
+    return PopScope(
+      canPop: false,
+      onPopInvokedWithResult: (didPop, result) {
+        if (!didPop) {
+          Navigator.of(context).pushReplacementNamed(AppRoutes.login);
+        }
+      },
+      child: Scaffold(
+        body: SafeArea(
+          child: ResponsiveCenter(
+            child: RefreshIndicator(
+              onRefresh: catalog.loadCategories,
+              child: CustomScrollView(
+                physics: const AlwaysScrollableScrollPhysics(),
+                slivers: [
+                  const SliverToBoxAdapter(child: _HomeHeader()),
+                  const SliverToBoxAdapter(
+                    child: SectionTitle(
+                      title: 'What do you need help with?',
+                      subtitle: 'Choose a category to see available services',
+                    ),
                   ),
-                ),
-                ..._categorySlivers(context, catalog, state),
-                const SliverToBoxAdapter(child: _TrustStrip()),
-                const SliverToBoxAdapter(child: SizedBox(height: 24)),
-              ],
+                  ..._categorySlivers(context, catalog, state),
+                  const SliverToBoxAdapter(child: _TrustStrip()),
+                  const SliverToBoxAdapter(child: SizedBox(height: 24)),
+                ],
+              ),
             ),
           ),
         ),
@@ -90,7 +98,8 @@ class HomeScreen extends StatelessWidget {
               padding: const EdgeInsets.only(top: 24),
               child: EmptyView(
                 title: 'No services yet',
-                message: 'We are adding services in your area. Please check back soon.',
+                message:
+                    'We are adding services in your area. Please check back soon.',
                 actionLabel: 'Refresh',
                 onAction: catalog.loadCategories,
               ),
@@ -147,7 +156,7 @@ class _HomeHeader extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Famto Services',
+                  'Famto Fixit Services',
                   style: TextStyle(
                     color: Colors.white70,
                     fontWeight: FontWeight.w600,

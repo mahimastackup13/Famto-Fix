@@ -92,10 +92,11 @@ class _LoginScreenState extends State<LoginScreen> {
       child: Column(
         children: [
           Container(
-            width: 110,
-            height: 110,
+            width: 96,
+            height: 96,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(28),
+              color: Colors.white.withOpacity(0.92),
+              borderRadius: BorderRadius.circular(24),
               boxShadow: const [
                 BoxShadow(
                   color: Color(0x1A0B3A3A),
@@ -104,12 +105,10 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ],
             ),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(28),
-              child: Image.asset(
-                'assets/images/categories/famlogo.png',
-                fit: BoxFit.cover,
-              ),
+            padding: const EdgeInsets.all(14),
+            child: Image.asset(
+              'assets/images/categories/famlogo.png',
+              fit: BoxFit.contain,
             ),
           ),
           const SizedBox(height: 36),

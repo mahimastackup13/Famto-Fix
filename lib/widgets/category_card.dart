@@ -42,7 +42,6 @@ class CategoryCard extends StatelessWidget {
   }
 }
 
-/// Category picture with an icon fallback (no image set, or file missing).
 class _CategoryImage extends StatelessWidget {
   const _CategoryImage({required this.category});
 
@@ -51,23 +50,38 @@ class _CategoryImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final iconFallback = Container(
-      color: category.color.withOpacity(0.14),
+      height: 90,
+      decoration: BoxDecoration(
+        color: category.color.withOpacity(0.14),
+        borderRadius: BorderRadius.circular(16),
+      ),
       alignment: Alignment.center,
-      child: Icon(category.icon, color: category.color, size: 36),
+      child: Icon(category.icon, color: category.color, size: 32),
     );
     final path = category.imagePath;
 
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(16),
-      child: SizedBox(
-        width: double.infinity,
-        child: path == null
-            ? iconFallback
-            : Image.asset(
-                path,
-                fit: BoxFit.cover,
-                errorBuilder: (_, __, ___) => iconFallback,
-              ),
+    return Container(
+      height: 90,
+      decoration: BoxDecoration(
+        color: category.color.withOpacity(0.08),
+        borderRadius: BorderRadius.circular(16),
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(16),
+        child: Padding(
+          padding: const EdgeInsets.all(12),
+          child: path == null
+              ? iconFallback
+              : Center(
+                  child: Image.asset(
+                    path,
+                    width: 52,
+                    height: 52,
+                    fit: BoxFit.contain,
+                    errorBuilder: (_, __, ___) => iconFallback,
+                  ),
+                ),
+        ),
       ),
     );
   }
