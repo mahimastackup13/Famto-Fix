@@ -10,7 +10,6 @@ import 'package:famto_mini_booking/screens/login_screen.dart';
 import 'package:famto_mini_booking/screens/service_details_screen.dart';
 import 'package:famto_mini_booking/screens/service_list_screen.dart';
 
-/// Route names — a single source of truth for navigation.
 class AppRoutes {
   AppRoutes._();
   static const login = '/';
@@ -20,9 +19,6 @@ class AppRoutes {
   static const booking = '/booking';
   static const confirmation = '/confirmation';
 }
-
-/// Central route table. Each route validates its argument so a wrong or
-/// missing argument shows a friendly page instead of crashing.
 class AppRouter {
   AppRouter._();
 

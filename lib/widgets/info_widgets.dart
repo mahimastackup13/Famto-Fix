@@ -62,7 +62,6 @@ class InfoChip extends StatelessWidget {
   }
 }
 
-/// Compact stat card (icon, small label, bold value).
 class StatTile extends StatelessWidget {
   const StatTile({
     super.key,
@@ -102,7 +101,6 @@ class StatTile extends StatelessWidget {
   }
 }
 
-/// Label/value row with a leading icon, used in summaries.
 class DetailRow extends StatelessWidget {
   const DetailRow({
     super.key,

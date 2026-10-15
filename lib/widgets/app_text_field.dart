@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-/// Consistently styled form field with validation on user interaction.
 class AppTextField extends StatelessWidget {
   const AppTextField({
     super.key,

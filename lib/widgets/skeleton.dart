@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-/// Pulsing placeholder block shown while data loads.
 class SkeletonBox extends StatefulWidget {
   const SkeletonBox({super.key, this.width, this.height, this.radius = 16});
 
@@ -44,7 +43,6 @@ class _SkeletonBoxState extends State<SkeletonBox>
   }
 }
 
-/// Skeleton for the service list screen.
 class ServiceListSkeleton extends StatelessWidget {
   const ServiceListSkeleton({super.key});
 

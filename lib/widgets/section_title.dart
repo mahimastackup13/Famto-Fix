@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:famto_mini_booking/core/theme.dart';
 
-/// Section heading with optional subtitle and numbered step badge.
 class SectionTitle extends StatelessWidget {
   const SectionTitle({
     super.key,

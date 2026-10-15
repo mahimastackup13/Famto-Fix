@@ -22,7 +22,6 @@ class Service {
   final int durationMinutes;
   final List<String> inclusions;
 
-  /// Optional remote image. When null (or it fails to load) the UI shows a
-  /// themed illustration, so the app works fully offline.
+  
   final String? imageUrl;
 }

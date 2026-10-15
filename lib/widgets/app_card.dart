@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:famto_mini_booking/core/theme.dart';
 
-/// Bordered white surface used by every card in the app.
 class AppCard extends StatelessWidget {
   const AppCard({
     super.key,

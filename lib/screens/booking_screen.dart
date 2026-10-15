@@ -69,7 +69,6 @@ class _BookingScreenState extends State<BookingScreen> {
       _toast('Please fix the highlighted fields');
       return;
     }
-
     final success = await booking.submit(
       service: widget.service,
       customerName: _nameController.text.trim(),
@@ -79,7 +78,6 @@ class _BookingScreenState extends State<BookingScreen> {
     if (!mounted) return;
 
     if (success) {
-      // Clear the stack back to Home so "back" never returns into the form.
       Navigator.of(context).pushNamedAndRemoveUntil(
         AppRoutes.confirmation,
         (route) => route.isFirst,

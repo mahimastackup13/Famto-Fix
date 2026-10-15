@@ -1,4 +1,3 @@
-/// Pure, UI-independent form validators (easy to unit test).
 class Validators {
   Validators._();
 
@@ -12,7 +11,6 @@ class Validators {
     return null;
   }
 
-  /// Indian mobile number: 10 digits starting with 6-9.
   static String? phone(String? input) {
     final value = (input ?? '').replaceAll(RegExp(r'\s+'), '');
     if (value.isEmpty) return 'Please enter your phone number';

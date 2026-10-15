@@ -5,7 +5,6 @@ import 'package:famto_mini_booking/models/service.dart';
 import 'package:famto_mini_booking/models/service_category.dart';
 import 'package:famto_mini_booking/providers/async_state.dart';
 
-/// Owns the browsing side of the app: categories and per-category services.
 class CatalogProvider extends ChangeNotifier {
   CatalogProvider(this._repository);
 

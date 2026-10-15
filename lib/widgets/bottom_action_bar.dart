@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:famto_mini_booking/core/theme.dart';
 
-/// Sticky bottom bar with an optional price block and a primary button.
 class BottomActionBar extends StatelessWidget {
   const BottomActionBar({
     super.key,

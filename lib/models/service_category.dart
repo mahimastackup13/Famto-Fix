@@ -16,6 +16,5 @@ class ServiceCategory {
   final IconData icon;
   final Color color;
 
-  /// Asset image for the category. When null or missing, [icon] is shown.
   final String? imagePath;
 }

@@ -4,8 +4,6 @@ import 'package:provider/provider.dart';
 import 'package:famto_mini_booking/models/service.dart';
 import 'package:famto_mini_booking/providers/catalog_provider.dart';
 
-/// Service picture. Uses [Service.imageUrl] when present, otherwise (or when
-/// offline) a gradient illustration themed with the category icon + colour.
 class ServiceImage extends StatelessWidget {
   const ServiceImage({
     super.key,

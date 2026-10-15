@@ -1,6 +1,5 @@
 enum SlotAvailability { available, booked, unavailable }
 
-/// A one-hour visit window starting at [hour] (24h clock).
 class TimeSlot {
   const TimeSlot(this.hour);
 

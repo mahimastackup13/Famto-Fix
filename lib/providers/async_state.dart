@@ -1,7 +1,5 @@
 enum LoadStatus { loading, loaded, empty, error }
 
-/// Small immutable view-state used by every async screen, so loading, empty
-/// and error handling look the same everywhere.
 class AsyncState<T> {
   const AsyncState._(this.status, this.data, this.message);
 

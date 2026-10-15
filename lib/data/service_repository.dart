@@ -12,10 +12,8 @@ class ServiceException implements Exception {
   String toString() => message;
 }
 
-/// Data access layer. Today it serves local mock data with simulated network
-/// latency; replacing it with a REST client needs no UI/provider changes.
+
 class ServiceRepository {
-  /// Demo switch (Home screen menu) to exercise error states.
   bool simulateError = false;
 
   static const _latency = Duration(milliseconds: 800);

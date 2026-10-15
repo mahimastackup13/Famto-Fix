@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:famto_mini_booking/core/theme.dart';
 
-/// Shared layout for empty / error messages.
 class StateMessageView extends StatelessWidget {
   const StateMessageView({
     super.key,
